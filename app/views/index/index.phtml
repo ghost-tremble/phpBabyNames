@@ -1,0 +1,32 @@
+<?php
+
+echo "<h1  class='m-5' >Baby names adding application";
+
+echo $this->tag->linkTo(["baby", "Add baby names!", 'class' => 'btn btn-dark m-5']);
+
+if ($babies->count() > 0) {
+    ?>
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+        <tr>
+            <th>S/N</th>
+            <th>Baby Name</th>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr>
+            <td colspan="3">Number of babies added: <?php echo $babies->count(); ?></td>
+        </tr>
+        </tfoot>
+        <tbody>
+        <?php foreach ($babies as $baby) { ?>
+            <tr>
+                <td><?php echo $baby->id; ?></td>
+                <td><?php echo $baby->name; ?></td>
+    
+            </tr>
+        <?php } ?>
+        </tbody>
+    </table>
+    <?php
+}

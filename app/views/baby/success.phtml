@@ -1,0 +1,11 @@
+
+<!-- Alert messsage -->
+<div class="mt-3 alert alert-<?php echo $success === true ? 'success' : 'danger'; ?>">
+    <?php echo $message; ?>
+</div>
+
+
+
+<!--back to home button -->
+
+<?php echo $this->tag->linkTo(['/', 'back to home', 'class' => 'btn btn-dark']); ?>

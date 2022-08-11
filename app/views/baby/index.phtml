@@ -1,0 +1,15 @@
+<h2 class="text-bold mt-3 mb-3">Add a baby using  this form</h2>
+
+<?php echo $this->tag->form("baby/success"); ?>
+
+    <p>
+        <label for="name">Name of baby</label>
+        <?php echo $this->tag->textField("name"); ?>
+    </p>
+
+
+    <p>
+        <?php echo $this->tag->submitButton(["Add baby ","Submit",'class' => 'btn btn-dark mt-3']); ?>
+    </p>
+
+</form>
